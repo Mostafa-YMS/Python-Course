@@ -1,0 +1,19 @@
+{
+    "Office_name": "ITI",
+    "emplyees": [
+        {
+            "id": 102,
+            "name": "Samy",
+            "money": 1000,
+            "mood": "happy",
+            "healthRate": 50,
+            "email": "mostafa@iti.eg",
+            "distanceToWork": 20,
+            "car": {
+                "name": "fiat 128",
+                "_Car__fuelRate": 50,
+                "_Car__velocity": 100
+            }
+        }
+    ]
+}

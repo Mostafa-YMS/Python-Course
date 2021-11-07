@@ -61,8 +61,8 @@ class Employee(Person):
             self.mood = self.moods[2]
 
     def drive(self, distance):
-        if self.__car is not None:
-            self.__car.run(self.__car.velocity, distance)
+        if self.car is not None:
+            self.car.run(self.car.velocity, distance)
         else:
             print("you don't have a car")
 

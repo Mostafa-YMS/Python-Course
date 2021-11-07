@@ -60,9 +60,9 @@ class Employee(Person):
         elif hours < 8:
             self.mood = self.moods[2]
 
-    def drive(self, velocity):
+    def drive(self, distance):
         if self.__car is not None:
-            self.__car.run(velocity, self.distanceToWork)
+            self.__car.run(self.__car.velocity, distance)
         else:
             print("you don't have a car")
 

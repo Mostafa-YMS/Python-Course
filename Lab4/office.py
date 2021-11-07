@@ -12,7 +12,7 @@ class Office:
         self.employees = employees
 
     def __call__(self, *args, **kwargs):
-        return {"Office_name": self.name, "emplyees": self.get_all_employees()}
+        return {"Office_name": self.name, "employees": self.get_all_employees()}
 
     def get_all_employees(self):
         return list(map(lambda x:x(), self.employees))

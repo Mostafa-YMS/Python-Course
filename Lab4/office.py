@@ -20,15 +20,24 @@ class Office:
 
     @employees.setter
     def employees(self, employees):
+        valid = True
         if type(employees) is list:
-            self.__employees = employees
+            for employee in employees:
+                if type(employee) is not Employee:
+                    valid = False
+            if valid:
+                self.__employees = employees
+            else:
+                self.__employees = []
+                print("Employees must be a list or instance of Employee class")
         elif type(employees) is Employee:
             self.__employees = [employees]
         else:
+            self.__employees = []
             print("Employees must be a list or instance of Employee class")
 
     def get_all_employees(self):
-        return list(map(lambda x:x(), self.employees))
+        return list(map(lambda x: x(), self.employees))
 
     def get_employee(self, empid):
         for emp in self.employees:

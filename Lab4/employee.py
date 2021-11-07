@@ -67,8 +67,8 @@ class Employee(Person):
             print("you don't have a car")
 
     def refuel(self, gasAmount = 100):
-        if self.__car is not None:
-            self.__car.fuelRate = self.__car.fuelRate + gasAmount
+        if self.car is not None:
+            self.car.fuelRate += gasAmount
         else:
             print("you don't have a car")
 

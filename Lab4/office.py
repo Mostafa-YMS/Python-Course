@@ -7,12 +7,25 @@ class Office:
     def change_emps_num(self, num):
         self.employeesNum = num
 
-    def __init__(self, name, employees):
+    def __init__(self, name, employees=[]):
         self.name = name
         self.employees = employees
 
     def __call__(self, *args, **kwargs):
         return {"Office_name": self.name, "employees": self.get_all_employees()}
+
+    @property
+    def employees(self):
+        return self.__employees
+
+    @employees.setter
+    def employees(self, employees):
+        if type(employees) is list:
+            self.__employees = employees
+        elif type(employees) is Employee:
+            self.__employees = [employees]
+        else:
+            print("Employees must be a list or instance of Employee class")
 
     def get_all_employees(self):
         return list(map(lambda x:x(), self.employees))

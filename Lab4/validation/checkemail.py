@@ -7,5 +7,5 @@ def chkmail(text):
     if len(text) != 0 and mail is not None:
         return True
     else:
-        print("Email Not Valid!!")
+        print("Email Not Valid!!, it will be set to None")
         return False
